@@ -33,7 +33,7 @@ public class WebFrameworkApplication {
         Map<String, String> heads = new HashMap<>();
         heads.put("Content-Type", "application/json;charset=UTF-8");
         heads.put("X-CMC_PRO_API_KEY","6cb1bdad-3369-4504-89fc-0272749f1722");
-        HttpResponse response = HttpRequest.get("https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest?id=7334")
+        HttpResponse response = HttpRequest.get("https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest?id=7334&convert=CNY")
                 .headerMap(heads, false)
                 .timeout(5 * 60 * 1000)
                 .execute();
