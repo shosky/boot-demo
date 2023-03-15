@@ -24,7 +24,7 @@ public class WebFrameworkApplication {
     }
 
     @GetMapping("/")
-    public ResponseEntity<String> welcome() {
+    public String welcome() {
 
         //创建json对象作为requestBody
         JSONObject jsonObject = new JSONObject();
@@ -37,7 +37,7 @@ public class WebFrameworkApplication {
                 .headerMap(heads, false)
                 .timeout(5 * 60 * 1000)
                 .execute();
-        return new ResponseEntity<>(JSONUtil.toJsonStr(response), HttpStatus.OK);
+        return JSONUtil.toJsonStr(response);
     }
 
     @GetMapping("/fcheaders")
