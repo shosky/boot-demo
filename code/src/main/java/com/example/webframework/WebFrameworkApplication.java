@@ -37,7 +37,7 @@ public class WebFrameworkApplication {
                 .headerMap(heads, false)
                 .timeout(5 * 60 * 1000)
                 .execute();
-        return JSONUtil.toJsonStr(response);
+        return JSONUtil.toJsonStr(response.body());
     }
 
     @GetMapping("/fcheaders")
