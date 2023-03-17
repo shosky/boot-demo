@@ -28,11 +28,9 @@ public class WebFrameworkApplication {
 
         //创建json对象作为requestBody
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("username", "");
-        jsonObject.put("password", "123");
         Map<String, String> heads = new HashMap<>();
         heads.put("Content-Type", "application/json;charset=UTF-8");
-        heads.put("X-CMC_PRO_API_KEY","6cb1bdad-3369-4504-89fc-0272749f1722");
+        heads.put("X-CMC_PRO_API_KEY","d9d41515-37a1-4a66-be91-a43fd466e15a");
         HttpResponse response = HttpRequest.get("https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest?id=7334&convert=CNY")
                 .headerMap(heads, false)
                 .timeout(5 * 60 * 1000)
